@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}Film Ratings{% endblock %}
+
+{% block content %}
+<h2>Film Ratings</h2>
+
+<ul>
+    {% for title, rating in films.items %}
+        <li>{{ title }} — IMDB: {{ rating }}
+            {% if rating > 8 %}
+                <strong>Great movie</strong>
+            {% else %}
+                <span>Average movie</span>
+            {% endif %}
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}

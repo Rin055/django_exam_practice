@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Exam App{% endblock %}</title>
+
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'exam_app' %}">Home</a></li>
+                <li><a href="{% url 'film_rating' %}">Film Ratings</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+        <p>This is the main content area.</p>
+        {% endblock %}
+    </main>
+
+</body>
+</html>
